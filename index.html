@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body> 
-  hello world map marker
+<body>
+  hello world map marker 123 
   <div id="map"></div>
 
   bir narsalar
@@ -47,6 +47,12 @@
         map: map,
         position: position,
         title: "Uluru",
+      });
+
+      marker.addListener("click", () => {
+        console.log('bosildi');
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
       });
     }
 
